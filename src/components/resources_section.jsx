@@ -6,64 +6,53 @@ import "../css/resources_section.css";
 
 const resources_list = [
   {
-    type: "YouTube Tutorial",
     icon: "fa fa-play-circle",
-    title: "Getting Started with Sandwich AI",
-    description: "A quick walkthrough of setting up orders, inventory, and staff scheduling.",
+    title: "Video Tutorials",
+    description: "Step-by-step walkthroughs of every module, from procurement to POS.",
+    link_text: "Watch on YouTube",
     href: "https://youtube.com/@sandwichai",
   },
   {
-    type: "Guide",
     icon: "fa fa-book",
-    title: "Streamlining Daily Operations",
-    description: "Best practices for running a leaner, faster restaurant with Sandwich AI.",
+    title: "Setup Guides",
+    description: "Written guides that get each department fully onboarded in a day.",
+    link_text: "Browse guides",
     href: "https://sandwichai.co/guides/daily-operations",
   },
   {
-    type: "Article",
-    icon: "fa fa-file-text",
-    title: "Payments & Inventory, Explained",
-    description: "How our automated payment and inventory tools work together.",
-    href: "https://sandwichai.co/blog/payments-inventory",
+    icon: "fa fa-question-circle",
+    title: "Help Center",
+    description: "Answers to common setup, billing, and integration questions.",
+    link_text: "Visit Help Center",
+    href: "https://sandwichai.co/help",
   },
 ];
 
 function resources_section() {
   return (
     <section className="resources-section px-5 w-screen" aria-label="resources section" id="main$resources" data-aos="fade-up">
-      <div className="resources-section-wrapper py-5 items-center w-full flex flex-col content-center gap-1">
+      <div className="resources-section-wrapper w-full flex flex-col gap-1">
 
-        <div className="hero-caption-label-rounded flex items-center gap-5 text-orange-500">
-          <i className="fa fa-circle"></i><label>Learn Sandwich AI</label>
-        </div>
+        <span className="resources-label text-orange-500">RESOURCES</span>
 
-        <h2 className="resources-heading text-center text-orange-500">
-          <em>Resources</em>
-        </h2>
+        <h2 className="resources-heading">Learn Sandwich, your way</h2>
 
-        <p className="resources-paragraph text-center">
-          Tutorials, guides, and articles to help you get the most out of Sandwich AI.
+        <p className="resources-paragraph">
+          Tutorials, guides, and playbooks to help every department get the most out of the platform.
         </p>
 
-        <div className="resources-grid w-full flex flex-wrap justify-center gap-3 mt-2">
+        <div className="resources-grid w-full flex flex-wrap gap-2 mt-3">
           {resources_list.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resource-card flex flex-col gap-1"
-            >
-              <div className="resource-card-icon text-orange-500">
-                <i className={item.icon}></i>
+            <div key={index} className="resource-card flex flex-col gap-1">
+              <div className="resource-card-icon-wrap flex items-center justify-center">
+                <i className={`${item.icon} text-orange-500`}></i>
               </div>
-              <span className="resource-card-type text-orange-500">{item.type}</span>
               <h3 className="resource-card-title">{item.title}</h3>
               <p className="resource-card-desc">{item.description}</p>
-              <span className="resource-card-link text-orange-500">
-                View resource <i className="fa fa-arrow-right"></i>
-              </span>
-            </a>
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="resource-card-link text-orange-500 flex items-center gap-1">
+                <span>{item.link_text}</span><i className="fa fa-arrow-right"></i>
+              </a>
+            </div>
           ))}
         </div>
 
