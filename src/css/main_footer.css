@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  font-family: Jakarta-reg;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}
+
+
+@font-face {font-family: Jakarta-reg; src: url(../assets/font_style/PlusJakartaSans-Regular.ttf);}
+@font-face {font-family: phluff; src: url(../assets/font_style/Phluff\ Test.ttf);}
+@font-face {font-family: phluff-med; src: url(../assets/font_style/Phluff\ Test\ Medium.ttf);}
+
+
+:root{
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orangered-500: #ff0d01;
+  --web-background-orange: #ff0d01;
+  --web-background-orange-hover: #961D14;
+}
+
+.main-footer-section{font-size: 0.8rem !important;}
+
+.app-download-wrapper button{
+  justify-content: center;
+  width: 9rem !important;
+  background: #FFEE9C !important;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: 0.1rem #000 solid;
+  height: 2.7rem !important;
+}
+
+.app-download-wrapper label{
+  color: #555555 !important;
+}
+
+.main-footer-navigation ul{
+  display: flex !important; gap: 1rem;
+}
+
+.main-footer-navigation li{
+  display: flex !important;
+  color: #555555; gap: 1rem;
+  transition: 0.20s all ease-in-out;
+}
+
+.main-footer-navigation li:hover{
+  color: var(--color-orangered-500);
+}
+
+.footer-copy-right-txt{
+  color: #555555 !important;
+}
+
+@media (max-width:900px) {
+  .main-footer-wrapper{gap: 1rem !important;}
+ .main-footer-section{padding: 2rem 4rem;}
+}
+
+@media (max-width: 570px) {
+  /* .main-footer-wrapper{justify-content: center;} */
+  .footer-copy-right-txt span{text-align: center !important;}
+  .main-footer-section{padding: 1rem 1.5rem;}
+  .app-download-wrapper button{
+    width: 8rem !important; height: 2.3rem !important;
+  }
+}
+
+@media (max-width: 405px) {
+  .app-download-wrapper button{
+    justify-content: center;
+    width: 6rem !important;
+    background: #FFEE9C !important;
+    border-radius: 5rem; font-size: 0.6rem;
+    cursor: pointer;
+    border: 0.1rem #000 solid;
+    height: 2rem !important;
+  }
+  .app-download-wrapper button img{width: 0.9rem;}
+}

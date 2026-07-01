@@ -1,0 +1,104 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  font-family: Jakarta-reg;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}
+
+
+@font-face {font-family: Jakarta-reg; src: url(../assets/font_style/PlusJakartaSans-Regular.ttf);}
+@font-face {font-family: phluff; src: url(../assets/font_style/Phluff\ Test.ttf);}
+@font-face {font-family: phluff-med; src: url(../assets/font_style/Phluff\ Test\ Medium.ttf);}
+
+
+:root{
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orangered-500: #ff0d01;
+  --web-background-orange: #ff0d01;
+  --web-background-orange-hover: #961D14;
+}
+
+/* #FEC60F */
+
+.faq-main-section{
+  margin: 5rem 0 !important;
+  background: #FFFAEB;
+}
+
+.faq-caption-heading{
+  line-height: 70px;
+  width: 75%;
+  color: #391B13 !important;
+  font-family: phluff-med;
+  font-size: clamp(1.5rem, 4vw + 1rem, 3.5rem);
+}
+
+.faq-caption-paragraph{
+  color: #666666;
+  font-size: clamp(1.5rem, 4vw + 1rem, 1.6rem);
+}
+
+.faq-drowdown{
+  cursor: pointer;
+  background: var(--color-white);
+  /* height: 6.5rem !important; */
+  transition: all 1s ease-in-out !important;
+  max-height: 150px !important;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden !important;
+  border: 0.1rem #99999944 solid;
+  box-shadow: 0px 3px 10px rgb(0, 0, 0, 0.1);
+}
+
+.faq-drowdown-open{
+  transition: all 1s ease-in-out !important;
+  max-height: 100vh !important;
+}  
+
+.faq-dropdown-header h3{
+  color: #391B13 !important;
+  font-family: phluff-med;
+  font-size: clamp(1.3rem, 4vw + 1rem, 1.3rem);
+}
+
+.faq-dropdown-header p{font-size: clamp(1rem, 4vw + 1rem, 1.1rem);}
+
+.faq-caption-paragraph{
+  width: 49% !important;
+  font-size: clamp(1.3rem, 4vw + 1rem, 1.3rem);
+}
+
+@media (max-width: 870px) {
+  .faq-caption-heading{
+    line-height: 50px;
+    width: 100%;
+    color: #391B13 !important;
+    font-family: phluff-med;
+    font-size: clamp(2.5rem, 4vw + 1rem, 2.5rem);
+  }
+
+  .faq-caption-paragraph{
+    color: #666666; width: 100% !important;
+    font-size: clamp(1.2rem, 4vw + 1rem, 1rem);
+  }
+  .faq-main-section{padding: 5rem 1rem;}
+}
+
+@media (max-width: 770px){
+  .faq-dropdown-header h3{
+    color: #391B13 !important;
+    font-family: phluff-med;
+    font-size: clamp(1rem, 4vw + 1rem, 1rem);
+  }
+
+}
+
+@media (max-width: 570px){
+  .faq-dropdown-header h3{
+    font-size: clamp(0.8rem, 4vw + 1rem, 0.8rem);
+  }
+}

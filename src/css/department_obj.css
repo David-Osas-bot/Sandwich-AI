@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  font-family: Jakarta-reg;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}
+
+
+@font-face {font-family: Jakarta-reg; src: url(../assets/font_style/PlusJakartaSans-Regular.ttf);}
+@font-face {font-family: phluff; src: url(../assets/font_style/Phluff\ Test.ttf);}
+@font-face {font-family: phluff-med; src: url(../assets/font_style/Phluff\ Test\ Medium.ttf);}
+
+
+:root{
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orangered-500: #ff0d01;
+  --web-background-orange: #ff0d01;
+  --web-background-orange-hover: #961D14;
+}
+
+.resturant-manager-card{
+  border-radius: 1rem;
+  background: #FFEE9C !important;
+}
+
+.target-audience-header span{font-size: 1.2rem !important;}
+.target-audience-header h2{
+  color: #000000; line-height: 66px;
+  font-size: clamp(3.5rem, 4vw + 1rem, 3.5rem);
+  font-family: phluff-med; width: 75%;
+}
+
+.target-audience-header p{
+  width: 55% !important; color: #777;
+  font-size: clamp(1.5rem, 4vw + 1rem, 1.5rem);
+}
+
+.resturant-manager-caption-section h3{
+  font-weight: bold;
+  font-family: phluff; font-size: 1.3rem;
+}
+
+.resturant-manager-caption-section p{
+  color: #961D14; font-weight: bold;
+}
+
+.resturant-management-info-list li{
+  gap: 0.5rem !important;
+  padding: 0.6rem 0;
+  display: flex; color: #444;
+}
+
+.resturant-management-info-list i{font-size: 0.7rem; color: #961D14;}
+
+
+.kitchen-staff-card{border-radius: 1rem; background: #391B13;}
+
+.kitchen-staff-header-txt h3{
+  font-weight: bold;
+  font-family: phluff; font-size: 1.3rem;
+}
+
+.kitchen-staff-header-txt p{font-weight: bold;}
+
+.kitchen-staff-info-list li{
+  gap: 0.5rem !important;
+  display: flex; align-items: center;
+  line-height: 3.5rem; color: #ffffffa6;
+}
+
+.department-staff-card{
+  background: #FFFAEB;
+  border-radius: 1rem;
+  border: 0.1rem #99999970 solid;
+}
+
+.department-staff-card:nth-child(2){background: #ffffff;}
+
+.department-staff-header-txt h3{
+  color: #961D14; font-weight: bold;
+  font-family: phluff; font-size: 1.3rem;
+}
+
+.department-staff-header-txt h3 em{
+  font-style: normal; font-weight: bold;
+}
+
+.department-staff-header-txt span{
+  color: #ff0d01 !important;
+  font-weight: bold;
+}
+
+.department-staff-info-list li{
+  padding: 0.6rem 0rem;
+  align-items: center;
+  gap: 0.5rem !important; color: #666;
+}
+
+.department-staff-info-list li i{font-size: 0.8rem;}
+
+@media (max-width: 1355px) {
+
+  .resturant-manager-card{width: 100%;}
+  .resturant-manager-card-wrapper{
+    display: flex; align-items: center;
+    justify-content: space-between;
+    width: 100% !important;
+  }
+  .resturant-manager-image-section img{width: 25rem;}
+  .target-audience-grid-wrapper{flex-wrap: wrap;}
+}
+
+@media (max-width:1055px) {
+
+  .multi-department-grid-wrapper{
+    flex-direction: row;
+  }
+  .kitchen-staff-card{flex-wrap: wrap;}
+  .management-grid-wrapper{flex-wrap: wrap;}
+
+}
+
+@media (max-width:1060px) {
+  .management-grid-wrapper{flex-wrap: wrap;}
+  .multi-department-grid-wrapper{flex-direction: column;}
+}
+
+@media (max-width:870px) {
+
+  .resturant-manager-card-wrapper{
+    flex-direction: column; gap: 2rem;
+  }
+  .kitchen-staff-card{padding: 4rem 0.5rem; justify-content: center;}
+
+  .management-grid-wrapper{
+    justify-content: center;
+  }
+  .department-staff-card{width: 100%;}
+
+  .target-audience-header span{font-size: 1.2rem !important;}
+  .target-audience-header h2{
+    color: #000000; line-height: 66px;
+    font-size: clamp(3.5rem, 4vw + 1rem, 3.5rem);
+    font-family: phluff-med; width: 95% !important;
+  }
+
+  .target-audience-header p{
+    width: 95% !important; color: #777;
+    font-size: clamp(1.5rem, 4vw + 1rem, 1.5rem);
+  }
+
+}
+
+@media (max-width: 570px) {
+  .target-audience-header h2{font-size: clamp(1.5rem, 4vw + 1rem, 3.5rem); line-height: 50px;}
+  .target-audience-header p{font-size: clamp(0.9rem, 4vw + 1rem, 1.2rem);}
+  .target-audience-section{padding: 5rem 1.5rem;}
+}
+
+@media (max-width: 480px) {
+  .target-audience-header h2{line-height: 50px;}
+  .target-audience-header p{font-size: clamp(0.9rem, 4vw + 1rem, 1.1rem);}
+  .target-audience-section{padding: 5rem 1.5rem;}
+}

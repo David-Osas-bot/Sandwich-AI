@@ -1,0 +1,7 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}

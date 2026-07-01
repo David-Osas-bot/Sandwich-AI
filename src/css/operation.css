@@ -1,0 +1,128 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  font-family: Jakarta-reg;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}
+
+
+@font-face {font-family: Jakarta-reg; src: url(../assets/font_style/PlusJakartaSans-Regular.ttf);}
+@font-face {font-family: phluff; src: url(../assets/font_style/Phluff\ Test.ttf);}
+@font-face {font-family: phluff-med; src: url(../assets/font_style/Phluff\ Test\ Medium.ttf);}
+
+
+:root{
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orangered-500: #ff0d01;
+  --web-background-orange: #ff0d01;
+  --web-background-orange-hover: #961D14;
+}
+
+
+.operation-header{text-align: left;}
+
+.operation-header h2{
+  line-height: 66px;
+  width: 35%; letter-spacing: -0.2rem;
+  font-family: phluff-med;
+  font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+}
+
+.operation-header p{
+  width: 37%; color: #555;
+  font-size: clamp(1.2rem, 4vw + 1rem, 1.2rem);
+}
+
+.carousel-wrapper h3{
+  font-family: phluff-med;
+  font-size: clamp(1.5rem, 4vw + 1rem, 1.5rem);
+}
+
+.operations{height: auto;}
+
+.container {
+  overflow: hidden;
+  width: 100% !important;
+  max-width: 100%; margin: auto;
+}
+
+/* Tabs */
+.tabs {
+  width: 100%;
+  display: flex; gap: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  color: #999 !important;
+  border-radius: 5rem;
+  background: transparent;
+  border: 0.1rem #99999936 solid;
+  cursor: pointer;
+  width: 15rem !important;
+}
+
+.tabs button.active {
+  background: #ff0d01; color: white !important;
+}
+
+/* Carousel */
+.carousel {
+  margin: 0.5rem 0;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute; width: 100%; 
+  object-fit: cover; opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active { opacity: 1;}
+
+
+@media (max-width: 1250px) {
+  .operation-header h2{width: 75%;}
+  .operation-header p{width: 75%;}
+  .operations{ padding: 5rem 4.5rem !important;}
+
+  .carousel {height: 80vh;}
+}
+
+@media (max-width: 1060px) {
+  .slide img {width: 85%;}
+  .carousel {height: 75vh;}
+}
+
+
+@media (max-width: 900px){
+  .carousel {height: 30rem;}
+  .operations{padding: 5rem 1rem !important;}
+}
+
+@media (max-width: 750px){}
+
+@media (max-width: 695px) {}
+
+@media (max-width: 560px) {
+  .operation-header h2{width: 100%; line-height: 50px;}
+  .operation-header p{width: 100%;}
+  .carousel {height: 15rem; padding-bottom: 0 !important;}
+  .operations{padding: 5rem 1.5rem !important;}
+}
+
+@media (max-width: 480px) {
+  .operation-header h2{width: 100%; line-height: 50px;}
+}
+
+@media (max-width: 380px) {
+}

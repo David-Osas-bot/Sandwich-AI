@@ -1,0 +1,192 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  font-family: Jakarta-reg;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none; border: none;
+}
+
+
+@font-face {font-family: Jakarta-reg; src: url(../assets/font_style/PlusJakartaSans-Regular.ttf);}
+@font-face {font-family: phluff; src: url(../assets/font_style/Phluff\ Test.ttf);}
+@font-face {font-family: phluff-med; src: url(../assets/font_style/Phluff\ Test\ Medium.ttf);}
+
+
+:root{
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orangered-500: #ff0d01;
+  --web-background-orange: #ff0d01;
+  --web-background-orange-hover: #961D14;
+}
+
+
+/* 391B13 */
+
+
+.hero-caption-label-rounded{
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 14px 6px;
+  border-radius: 5rem;
+  justify-content: center;
+  width: 245px; height: 28px;
+  border: 0.1rem #ff0e011e solid;
+  background: #ff0e011e !important;
+}
+
+.hero-caption-label-rounded i{font-size: 0.4rem;}
+
+.main-caption-heading{
+  /* font-size: 66px; */
+  line-height: 85px;
+  text-align: center;
+  font-family: phluff-med;
+  font-size: clamp(1.5rem, 4vw + 1rem, 3.5rem);
+}
+
+.main-caption-heading em{
+  color: #391B13;
+  font-family: phluff-med;
+  font-style: normal;
+}
+
+.hero-caption-label-rounded-gold{
+  /* font-size: 55px; */
+  font-size: clamp(1.2rem, 4vw + 1rem, 3.5rem);
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  background: #FEC60F;
+  rotate: -1deg;
+  color: #391B13 !important;
+}
+
+.hero-caption-label-rounded-gold h2{
+  font-family: phluff-med;
+}
+
+.hero-caption-paragraph{
+  font-size: 1rem;
+  width: calc(100% - 55%);
+}
+
+.call-to-action-wrapper button{
+  border-radius: 5rem;
+  cursor: pointer;
+  width: 18rem; height: 3.5rem;
+}
+
+.live-preview-btn{
+  align-content: center;
+  justify-content: center;
+  color: var(--color-white);
+  box-shadow: 0px 4px 12px rgb(0, 0, 0, 0.1);
+  transition: 0.30s all ease-in-out;
+}
+
+.live-preview-btn:hover{
+  box-shadow: 0px 4px 12px #391b1348;
+  background: var(--web-background-orange-hover);
+}
+
+.chat-contact-btn{
+  transition: 0.30s all ease-in-out;
+  border: 0.1rem #f7dece solid;
+  background: #F9F4F1 !important;
+}
+
+.chat-contact-btn:hover{
+  background: #F6ECE4;
+}
+
+.users-proof-wrapper span{font-size: 0.8rem;}
+
+.hero-footer-sponsor{
+  background: #8d625713;
+  border: 0.1rem #9999992a solid;
+}
+
+.sponsor-nav-list-act span{
+  color: #000000 !important;
+}
+
+.sponsor-nav-wrapper li span{
+  font-family: phluff; color: #999999;
+}
+
+@media (max-width: 1033px) {.hero-caption-paragraph{width: calc(100% - 30%);}}
+
+@media (max-width: 800px) {
+
+  .main-hero-section{padding: 3rem 2rem !important;}
+  .main-hero-section-wrapper{padding: 1rem 1rem !important;}
+
+  .main-caption-heading{line-height: 70px;}
+  .hero-caption-paragraph{width: calc(100% - 20%);}
+
+  .call-to-action-wrapper button{
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 0.9rem !important;
+    width: 12rem; height: 3.2rem;
+  }
+
+  .sponsor-nav{padding: 0rem 0.5rem;}
+  .sponsor-nav-wrapper{gap: 0 !important;}
+
+  .sponsor-nav-list-act li span{
+    color: #000000 !important;
+  }
+
+  .sponsor-nav-wrapper li span{
+    padding: 0 0.5rem;
+    font-size: 0.7rem !important;
+    font-family: phluff; color: #999999;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .hero-footer-sponsor{
+    margin: 2rem 0 !important;
+  }
+  
+  .users-proof-wrapper img{width: 5rem;}
+  .users-proof-wrapper span{font-size: 0.6rem;}
+
+  .sponsor-nav-wrapper li span{padding: 0 0.2rem; font-size: 0.5rem !important;}
+
+  .main-caption-heading{line-height: 50px;}
+  .hero-caption-paragraph{width: calc(100% - 5%); text-align: center;}
+}
+
+@media (max-width: 480px) {
+
+  
+
+  .main-hero-section{padding: 2rem 0.5rem !important;}
+
+  .call-to-action-wrapper button{
+    width: 11rem; height: 3rem;
+    font-size: 0.7rem !important;
+  }
+
+  .hero-caption-label-rounded-gold{
+    font-size: clamp(2rem, 4vw + 1rem, 2rem);
+  }
+  .main-caption-heading{line-height: 50px;}
+  .hero-caption-paragraph{width: calc(100% - 3%); text-align: center; font-size: 0.9rem;}
+}
+
+@media (max-width: 380px) {
+  .hero-caption-label-rounded-gold{
+    font-size: clamp(1.7rem, 4vw + 1rem, 1.7rem);
+  }
+
+  .call-to-action-wrapper button{
+    width: 10rem; height: 3rem;
+    font-size: 0.7rem !important;
+  }
+
+}

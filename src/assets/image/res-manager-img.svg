@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" rx="12" fill="#208537" fill-opacity="0.12"/>
+<circle cx="24" cy="24" r="16" fill="black" fill-opacity="0.05"/>
+<path d="M23.9993 30.6668C20.3175 30.6668 17.3327 27.6821 17.3327 24.0002C17.3327 20.3183 20.3175 17.3335 23.9993 17.3335C27.6812 17.3335 30.666 20.3183 30.666 24.0002C30.666 27.6821 27.6812 30.6668 23.9993 30.6668Z" stroke="black" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27 25.6665C27 25.6665 26 26.9998 24 26.9998C22 26.9998 21 25.6665 21 25.6665" stroke="black" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.3327 22.0002C26.1486 22.0002 25.9993 21.8509 25.9993 21.6668C25.9993 21.4827 26.1486 21.3335 26.3327 21.3335C26.5168 21.3335 26.666 21.4827 26.666 21.6668C26.666 21.8509 26.5168 22.0002 26.3327 22.0002Z" fill="black" fill-opacity="0.9" stroke="black" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.6667 22.0002C21.4826 22.0002 21.3333 21.8509 21.3333 21.6668C21.3333 21.4827 21.4826 21.3335 21.6667 21.3335C21.8508 21.3335 22 21.4827 22 21.6668C22 21.8509 21.8508 22.0002 21.6667 22.0002Z" fill="black" fill-opacity="0.9" stroke="black" stroke-opacity="0.9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
