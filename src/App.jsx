@@ -12,7 +12,7 @@ import CtaSection from './components/cta_section'; import MainFooter from './com
 import DeaprtmentObj from './components/department_obj'; import Testimonial from './components/testimonial';
 import OperationSec from './components/operations'; 
 import Sandwichmobile from "./components/mobile_section"; import Loader from "./components/loader";
-import ResourcesSection from "./components/resources_section";
+import ResourcesSection from "./components/resources_section"; import AiChatbot from "./components/ai_chatbot";  
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
       <TargetOutcome/> 
       {/* <Testimonial/> */}
       <FaqSection /> <Sandwichmobile /> <ResourcesSection /> <CtaSection /> <MainFooter />
-
+      <AiChatbot />
     </>
   )
 }
