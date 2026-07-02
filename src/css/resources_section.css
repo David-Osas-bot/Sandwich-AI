@@ -1,14 +1,14 @@
 .resources-section{
-  padding: 5rem 2rem;
+  padding: 7rem 2rem;
 }
 
 .resources-section-wrapper{
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .resources-label{
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -18,64 +18,66 @@
   font-weight: 800;
   color: #16110f;
   line-height: 1.15;
-  margin-top: 0.4rem;
-  font-size: clamp(1.8rem, 3vw + 1rem, 2.75rem);
+  margin-top: 0.6rem;
+  font-size: clamp(2.2rem, 3.5vw + 1rem, 3.25rem);
 }
 
 .resources-paragraph{
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #6b6b6b;
-  line-height: 1.5rem;
-  max-width: 620px;
-  margin-top: 0.5rem;
+  line-height: 1.7rem;
+  max-width: 680px;
+  margin-top: 0.8rem;
 }
 
 .resources-grid{
   align-items: stretch;
+  gap: 1.5rem !important;
+  margin-top: 2rem !important;
 }
 
 .resource-card{
   background: var(--color-white);
   border: 0.1rem #e9e5e2 solid;
-  border-radius: 1rem;
-  padding: 1.75rem;
-  flex: 1 1 300px;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  flex: 1 1 320px;
   transition: 0.30s all ease-in-out;
 }
 
 .resource-card:hover{
-  box-shadow: 0px 6px 16px rgb(0, 0, 0, 0.06);
-  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 0.07);
+  transform: translateY(-4px);
 }
 
 .resource-card-icon-wrap{
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 50%;
   background: #ff0e011e;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .resource-card-icon-wrap i{
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 .resource-card-title{
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   color: #16110f;
 }
 
 .resource-card-desc{
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   color: #6b6b6b;
-  line-height: 1.4rem;
+  line-height: 1.55rem;
 }
 
 .resource-card-link{
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
 }
 
 .resource-card-link i{
@@ -88,22 +90,26 @@
 }
 
 @media (max-width: 1033px) {
-  .resources-paragraph{max-width: calc(100% - 20%);}
+  .resources-paragraph{max-width: calc(100% - 10%);}
 }
 
 @media (max-width: 800px) {
-  .resources-section{padding: 3.5rem 1rem;}
-  .resource-card{flex: 1 1 260px;}
+  .resources-section{padding: 5rem 1rem;}
+  .resource-card{flex: 1 1 280px; padding: 2rem;}
 }
 
 @media (max-width: 560px) {
-  .resources-section{padding: 3rem 1rem;}
+  .resources-section{padding: 4rem 1rem;}
   .resources-grid{flex-direction: column;}
-  .resource-card{flex: 1 1 100%; padding: 1.5rem;}
-  .resources-paragraph{max-width: 100%;}
+  .resource-card{flex: 1 1 100%; padding: 1.75rem;}
+  .resources-paragraph{max-width: 100%; font-size: 1.05rem;}
+  .resource-card-icon-wrap{width: 3.8rem; height: 3.8rem;}
+  .resource-card-icon-wrap i{font-size: 1.4rem;}
+  .resource-card-title{font-size: 1.25rem;}
 }
 
 @media (max-width: 480px) {
-  .resources-heading{line-height: 1.2;}
-  .resources-paragraph{font-size: 0.92rem;}
+  .resources-heading{line-height: 1.2; font-size: 1.9rem;}
+  .resources-paragraph{font-size: 1rem;}
+  .resource-card{padding: 1.5rem;}
 }
