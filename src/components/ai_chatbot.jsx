@@ -20,7 +20,7 @@ const quick_replies = [
 function ai_chatbot() {
   const [is_open, set_is_open] = useState(false);
   const [has_unread, set_has_unread] = useState(true);
-  const [messages, set_messages] = useState([initial_bot_message]);
+  const [messages, set_messages] = useState([initial_bot_message]);   
   const [input_value, set_input_value] = useState("");
   const [is_typing, set_is_typing] = useState(false);
 

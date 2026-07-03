@@ -26,7 +26,7 @@ function App() {
       {loading && <Loader />}
       <MainHeader/> <HeroSection /> <OperationSec/> <DeaprtmentObj/>
       <TargetOutcome/> 
-      {/* <Testimonial/> */}
+      <Testimonial/>
       <FaqSection /> <Sandwichmobile /> <ResourcesSection /> <CtaSection /> <MainFooter />
       <AiChatbot />
     </>
