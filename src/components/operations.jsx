@@ -1,9 +1,9 @@
-
 import "../assets/library/flaticon/css/all.css"; 
 import "../assets/library/flaticon/css/all.min.css";
 import "../dist/style.css"; import "../css/operation.css";
 
 import React, { useState, useEffect } from "react";
+import DashedArcDecor from "../components/dashed_arc_decor";
 
 // Carousel Finance Image Import
 import finance_1 from "../assets/image/operations_carousel/finance (1).svg";
@@ -49,7 +49,7 @@ function operations() {
 
   return (
     <>
-    <section className="operations px-5 py-5 flex flex-col gap-4" id="Feature">
+    <section className="operations px-5 py-5 flex flex-col gap-4" id="Feature" style={{ position: "relative" }}>
       
       <header className="operation-header flex flex-col gap-1" data-aos="fade-up">
         <span className="text-amber-500 font-bold">WHAT SANDWICH DOES</span>

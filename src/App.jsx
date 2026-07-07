@@ -13,6 +13,7 @@ import DeaprtmentObj from './components/department_obj'; import Testimonial from
 import OperationSec from './components/operations'; 
 import Sandwichmobile from "./components/mobile_section"; import Loader from "./components/loader";
 import ResourcesSection from "./components/resources_section"; import AiChatbot from "./components/ai_chatbot";  
+import SectionBreakArc from "./components/section_break_arc";
 
 
 function App() {
@@ -24,7 +25,12 @@ function App() {
   return (
     <> 
       {loading && <Loader />}
-      <MainHeader/> <HeroSection /> <OperationSec/> <DeaprtmentObj/>
+      <MainHeader/> <HeroSection /> 
+      <div style={{ position: "relative" }}>
+        <SectionBreakArc radius={175} start_angle={-100} end_angle={190} left="4%" top={-90} z_index={1} />
+        <OperationSec />
+        <DeaprtmentObj />
+      </div>
       <TargetOutcome/> 
       <Testimonial/>
       <FaqSection /> <Sandwichmobile /> <ResourcesSection /> <CtaSection /> <MainFooter />

@@ -3,6 +3,9 @@ import "../assets/library/flaticon/css/all.css";
 import "../assets/library/flaticon/css/all.min.css";
 import "../dist/style.css"; import "../css/department_obj.css";
 
+import DashedArcDecor from "../components/dashed_arc_decor";
+
+
 // import image
 
 import kitchen$analysis$img from "../assets/image/KitchenAnalysis.svg";
@@ -18,7 +21,7 @@ import fin$man$img from "../assets/image/fin-man-img.svg";
 function deaprtment_obj(){
   return(
     <>
-      <section className="target-audience-section w-screen py-5 px-5" id="who-is-it-for">
+      <section className="target-audience-section w-screen py-5 px-5" id="who-is-it-for" style={{ position: "relative" }}>
         <div className="target-audience-wrapper w-full flex flex-col gap-4">
           <div className="target-audience-header flex flex-col gap-1" data-aos="fade-up">
             <span className="tagert-aud-label font-bold text-orange-500">BUILT FOR EVERY ROLE</span>
