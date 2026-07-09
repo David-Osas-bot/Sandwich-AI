@@ -25,7 +25,7 @@ function deaprtment_obj(){
         <div className="target-audience-wrapper w-full flex flex-col gap-4">
           <div className="target-audience-header flex flex-col gap-1" data-aos="fade-up">
             <span className="tagert-aud-label font-bold text-orange-500">BUILT FOR EVERY ROLE</span>
-            <h2 className="text-amber-100">One Platform, Five power Users</h2>
+            <h2 className="text-amber-100">One Platform, <br/> Five power Users</h2>
             <p className="target-aud-paragraph">
               Every department gets a dashboard built for how they actually work.
             </p>
