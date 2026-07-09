@@ -38,8 +38,8 @@ function DashedArcDecor({
         height={size}
         viewBox={`0 0 ${size} ${size}`}
         style={svg_style}
-      >
-        <circle
+      > 
+             <circle
           cx={radius}
           cy={radius}
           r={radius - stroke_width}

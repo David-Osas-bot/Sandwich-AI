@@ -9,6 +9,7 @@ function SectionBreakArc({
   end_angle = 190,
   top = 0,
   left = "4%",
+  rotation = 0,
   z_index = 0,
 }) {
   const size = radius * 2;
@@ -39,6 +40,8 @@ function SectionBreakArc({
     pointerEvents: "none",
     zIndex: z_index,
     overflow: "visible",
+    transform: `rotate(${rotation}deg)`,
+    transformOrigin: "center center",
   };
 
   return (

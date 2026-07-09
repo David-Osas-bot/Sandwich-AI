@@ -26,12 +26,25 @@ function App() {
     <> 
       {loading && <Loader />}
       <MainHeader/> <HeroSection /> 
-      <div style={{ position: "relative" }}>
-        <SectionBreakArc radius={175} start_angle={-100} end_angle={190} left="4%" top={-90} z_index={1} />
-        <OperationSec />
+      <OperationSec />
+      {/* <div style={{ position: "relative", overflow: "hidden" }}>
+        <SectionBreakArc radius={195} start_angle={-100} end_angle={190} left={-35} top={-40} rotation={95} z_index={1} />
         <DeaprtmentObj />
+        <TargetOutcome/> 
+      </div> */}
+      <div style={{ position: "relative", overflow: "visible" }}>
+        <SectionBreakArc 
+          radius={230}        
+          start_angle={-100} 
+          end_angle={190} 
+          left={-100}         
+          top={-260}           
+          rotation={100}       
+          z_index={1} 
+        />
+        <DeaprtmentObj />
+        <TargetOutcome/> 
       </div>
-      <TargetOutcome/> 
       <Testimonial/>
       <FaqSection /> <Sandwichmobile /> <ResourcesSection /> <CtaSection /> <MainFooter />
       <AiChatbot />
@@ -40,3 +53,8 @@ function App() {
 }
 
 export default App;
+{/* <div style={{ position: "relative" }}>
+        <SectionBreakArc radius={175} start_angle={-100} end_angle={190} left="4%" top={-90} z_index={1} />
+        <OperationSec />
+        <DeaprtmentObj />
+      </div> */}
