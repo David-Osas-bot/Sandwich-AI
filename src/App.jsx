@@ -34,12 +34,12 @@ function App() {
       </div> */}
       <div style={{ position: "relative", overflow: "visible" }}>
         <SectionBreakArc 
-          radius={230}        
+          radius={250}        
           start_angle={-100} 
           end_angle={190} 
           left={-100}         
           top={-260}           
-          rotation={100}       
+          rotation={93}       
           z_index={1} 
         />
         <DeaprtmentObj />
