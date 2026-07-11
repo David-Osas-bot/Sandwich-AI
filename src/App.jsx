@@ -13,7 +13,7 @@ import DeaprtmentObj from './components/department_obj'; import Testimonial from
 import OperationSec from './components/operations'; 
 import Sandwichmobile from "./components/mobile_section"; import Loader from "./components/loader";
 import ResourcesSection from "./components/resources_section"; import AiChatbot from "./components/ai_chatbot";  
-import SectionBreakArc from "./components/section_break_arc"; import CustomCursor from "./components/custom_cursor";
+import SectionBreakArc from "./components/section_break_arc"; 
 
 
 function App() {
@@ -43,7 +43,6 @@ function App() {
       <Testimonial/>
       <FaqSection /> <Sandwichmobile /> <ResourcesSection /> <CtaSection /> <MainFooter />
       <AiChatbot />
-      <CustomCursor />
     </>
   )
 }
