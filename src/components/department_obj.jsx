@@ -21,6 +21,7 @@ import fin$man$img from "../assets/image/fin-man-img.svg";
 function deaprtment_obj(){
   return(
     <>
+    
       <section className="target-audience-section w-[80%] h-auto flex items-center justify-center py-5 px-5" id="who-is-it-for" style={{ position: "relative" }}>
         <div className="target-audience-wrapper w-full flex flex-col gap-4">
           <div className="target-audience-header flex flex-col gap-1" data-aos="fade-up">

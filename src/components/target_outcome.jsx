@@ -51,7 +51,7 @@ function target_outcome(){
               <div className="target-outcome-card-wrapper flex flex-col gap-5">
                 {/* <h3 className="target-percentage text-white">15<em className="font-normal text-amber-500">%</em></h3> */}
                 <Counter target={15}/>
-                <p>Opertaional cost reduction through procurement optimization</p>
+                <p>Operational cost reduction through procurement optimization</p>
                 <span className="text-gray-100">Based on typical inventory inefficiency benchmarks</span>
               </div>
             </div>

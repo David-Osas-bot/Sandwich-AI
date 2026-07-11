@@ -32,12 +32,12 @@
 .target-outcome-caption h2{
   font-family: phluff-med;
   line-height: 3.8rem;
-  width: 75% !important;
+  /* width: 75% !important; */
   font-size: clamp(1.5rem, 4vw + 1rem, 3.5rem);
 }
 
 .target-outcome-caption p{
-  width: 55%;
+  /* width: 55%; */
   font-size: clamp(1.5rem, 4vw + 1rem, 1.7rem);
 }
 

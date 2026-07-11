@@ -54,7 +54,7 @@ function operations() {
       <header className="operation-header flex flex-col gap-1" data-aos="fade-up">
         <span className="text-amber-500 font-bold">WHAT SANDWICH DOES</span>
         <h2>Built for every layer of your operations</h2>
-        <p>Afully integrated platform where every module share real-time data with every other module.</p>
+        <p>A fully integrated platform where every module share real-time data with every other module.</p>
       </header>
 
 
