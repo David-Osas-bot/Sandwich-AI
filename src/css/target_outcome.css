@@ -37,7 +37,7 @@
 }
 
 .target-outcome-caption p{
-  /* width: 55%; */
+  width: 55%;
   font-size: clamp(1.5rem, 4vw + 1rem, 1.7rem);
 }
 
