@@ -17,12 +17,18 @@ const quick_replies = [
   "Book a demo",
 ];
 
+// Teaser timing — tune these to taste
+const TEASER_APPEAR_DELAY_MS = 2500;   
+const TEASER_AUTO_HIDE_MS = 12000;    
+
 function ai_chatbot() {
   const [is_open, set_is_open] = useState(false);
   const [has_unread, set_has_unread] = useState(true);
   const [messages, set_messages] = useState([initial_bot_message]);   
   const [input_value, set_input_value] = useState("");
   const [is_typing, set_is_typing] = useState(false);
+  const [show_teaser, set_show_teaser] = useState(false);
+  const [teaser_dismissed, set_teaser_dismissed] = useState(false);
 
   const messages_end_ref = useRef(null);
 
@@ -30,8 +36,45 @@ function ai_chatbot() {
     messages_end_ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, is_typing]);
 
+  // Teaser bubble lifecycle: appear after a delay, auto-hide after a while,
+  // unless the user has already dismissed it or opened the chat.
+  useEffect(() => {
+    if (teaser_dismissed || is_open) return;
+
+    const appear_timer = setTimeout(() => {
+      set_show_teaser(true);
+    }, TEASER_APPEAR_DELAY_MS);
+
+    return () => clearTimeout(appear_timer);
+  }, [teaser_dismissed, is_open]);
+
+  useEffect(() => {
+    if (!show_teaser) return;
+
+    const hide_timer = setTimeout(() => {
+      set_show_teaser(false);
+    }, TEASER_AUTO_HIDE_MS);
+
+    return () => clearTimeout(hide_timer);
+  }, [show_teaser]);
+
+  function dismiss_teaser(e) {
+    e.stopPropagation();
+    set_show_teaser(false);
+    set_teaser_dismissed(true);
+  }
+
+  function open_from_teaser() {
+    set_show_teaser(false);
+    set_teaser_dismissed(true);
+    set_is_open(true);
+    set_has_unread(false);
+  }
+
   function toggle_widget() {
     set_is_open((prev) => !prev);
+    set_show_teaser(false);
+    set_teaser_dismissed(true);
     if (!is_open) set_has_unread(false);
   }
 
@@ -78,6 +121,22 @@ function ai_chatbot() {
 
   return (
     <div className="chatbot-widget-root">
+
+      {show_teaser && !is_open && (
+        <div className="chatbot-teaser" onClick={open_from_teaser}>
+          <button className="chatbot-teaser-close" onClick={dismiss_teaser} aria-label="Dismiss">
+            <i className="fa fa-times"></i>
+          </button>
+          <div className="chatbot-teaser-content flex items-start gap-1">
+            <span className="chatbot-teaser-emoji">👋</span>
+            <div className="flex flex-col gap-1">
+              <span className="chatbot-teaser-title">Hi! I'm SandwichAI</span>
+              <span className="chatbot-teaser-text">Your AI assistant. How can I help you today?</span>
+            </div>
+          </div>
+        </div>
+      )}
+
       {is_open && (
         <div className="chatbot-panel flex flex-col" aria-label="AI chatbot widget">
 
@@ -152,7 +211,11 @@ function ai_chatbot() {
         </div>
       )}
 
-      <button className="chatbot-launcher-btn flex items-center justify-center" onClick={toggle_widget} aria-label="Open chat widget">
+      <button
+        className={`chatbot-launcher-btn flex items-center justify-center ${show_teaser ? "chatbot-launcher-pulse" : ""}`}
+        onClick={toggle_widget}
+        aria-label="Open chat widget"
+      >
         <i className="fa fa-comment"></i>
         {has_unread && !is_open && <span className="chatbot-launcher-badge"></span>}
       </button>
